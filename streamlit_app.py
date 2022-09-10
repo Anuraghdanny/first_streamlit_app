@@ -29,7 +29,7 @@ streamlit.dataframe(fruits_to_show)
 streamlit.header('Fruityvice Fruit Advice!')
 try:
   fruit_choice = streamlit.text_input('What fruit would you like information about?')
-  if not fruit_choice:
+  ifnot fruit_choice:
     streamlit.error("Please select a fruit to get information.")
   else:
       fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
@@ -38,16 +38,6 @@ try:
       
 expect URLError as e:
   streamlit.error()
-
-  
-#streamlit.write('The user entered',fruit_choice)
-
-#import requests
-
-
-#Take the Json version of the response and normalise it
-
-#Display the output in a tabular format/dataframe
 
 #Dont run anything past here while we troubleshoot
 streamlit.stop()
