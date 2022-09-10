@@ -43,6 +43,10 @@ try:
       
 except URLError as e:
   streamlit.error()
+  
+#streamlit.write('The user entered',fruit_choice)
+#Take the Json version of the response and normalise it
+#Display the output in a tabular format/dataframe
 
 #Dont run anything past here while we troubleshoot
 streamlit.stop()
