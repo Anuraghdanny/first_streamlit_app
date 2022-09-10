@@ -32,15 +32,15 @@ try:
    if not fruit_choice:
       streamlit.error("Please select a fruit to get information.")
    else:
-streamlit.write('The user entered',fruit_choice)
+#streamlit.write('The user entered',fruit_choice)
 
 #import requests
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
+      fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 
 #Take the Json version of the response and normalise it
-fruityvice_normalized = pandas.json_normalize(fruityvice_response.json()) # normalizes the text to dataframe
+      fruityvice_normalized = pandas.json_normalize(fruityvice_response.json()) # normalizes the text to dataframe
 #Display the output in a tabular format/dataframe
-streamlit.dataframe(fruityvice_normalized)
+      streamlit.dataframe(fruityvice_normalized)
 
 #Dont run anything past here while we troubleshoot
 streamlit.stop()
